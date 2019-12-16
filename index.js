@@ -30,9 +30,10 @@ function init() {
         name: "username"
       },
       {
-        type: "input",
-        message: "Do you prefer green/red/pink/blue?",
-        name: "color"
+        name: "color",
+        type: "list",
+        message: "Which background color do you prefer?",
+        choices: ["green", "red", "pink", "blue"]
       }
     ])
     .then(function({ username, color }) {
