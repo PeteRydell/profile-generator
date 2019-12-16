@@ -30,7 +30,7 @@ function init() {
       },
       {
         type: "input",
-        message: "Do you prefer green/red/pink/blue?",
+        message: "Which color would you like? green/red/pink/blue?",
         name: "color"
       }
     ])
@@ -77,7 +77,7 @@ writeFileAsync("index.html", generateHTML);
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
-  await page.goto('file:///Users/andysuarez/Desktop/Bootcamp/Week-9/ProfileGenerator/index.html');
+  await page.goto('file:///Users/peterrydell/Homework/profile-generator/index.html');
     await page.emulateMedia("screen");
     await page.pdf({ 
       path: `${username}.pdf`,
