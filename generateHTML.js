@@ -1,7 +1,3 @@
-const makePDF = require('pdfkit');
-const printer = new makePDF;
-const fs = require('fs')
-
 const colors = {
   green: {
     wrapperBackground: "#E6E1C3",
@@ -39,6 +35,16 @@ function generateHTML(data) {
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
       <link href="https://fonts.googleapis.com/css?family=BioRhyme|Cabin&display=swap" rel="stylesheet">
       <title>Document</title>
+      <body>
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <h2>Github stars</h2>
+              <h3>${data.stars}</h3>
+            </div>
+          </div>
+        </div>
+      </body>
       <style>
           @page {
             margin: 0;
@@ -141,7 +147,6 @@ function generateHTML(data) {
          padding-left: 100px;
          padding-right: 100px;
          }
-
          .row {
            display: flex;
            flex-wrap: wrap;
@@ -149,7 +154,6 @@ function generateHTML(data) {
            margin-top: 20px;
            margin-bottom: 20px;
          }
-
          .card {
            padding: 20px;
            border-radius: 6px;
@@ -162,22 +166,19 @@ function generateHTML(data) {
          flex: 1;
          text-align: center;
          }
-
          a, a:hover {
          text-decoration: none;
          color: inherit;
          font-weight: bold;
          }
-
          @media print { 
           body { 
             zoom: .75; 
           } 
          }
-      </style>`
-};
-
-module.exports = {
-  generateHTML,
-  colors
-}
+      </style>
+        }
+</html>`
+      };
+      
+module.exports = generateHTML;
