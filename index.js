@@ -3,6 +3,7 @@ const axios = require("axios");
 const inquirer = require("inquirer");
 const util = require("util");
 const puppeteer = require("puppeteer");
+const makePDF = require('pdfkit');
 
 const generateHTML = require("./generateHTML");
 
