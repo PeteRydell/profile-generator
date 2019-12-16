@@ -57,7 +57,7 @@ function init() {
           color: color
         };
          generateHTML(data);
-         writeToHTML(generateHTML(data));
+         writeHTML(generateHTML(data));
          makePdf(username);
          console.log("New profile created successfully!");
 
@@ -67,7 +67,7 @@ function init() {
 }
 
 
-const writeToHTML = function(generateHTML){
+const writeHTML = function(generateHTML){
   writeFileAsync("index.html", generateHTML);
   }
       
