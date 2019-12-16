@@ -35,7 +35,6 @@ inquirer
       });
     });
   });
-
 });
 
-  // pdf.create(document, options)
+pdf.create(document, options)

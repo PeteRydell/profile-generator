@@ -1,3 +1,7 @@
+const makePDF = require('pdfkit');
+const printer = new makePDF;
+const fs = require('fs')
+
 const colors = {
   green: {
     wrapperBackground: "#E6E1C3",
