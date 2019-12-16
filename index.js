@@ -30,7 +30,7 @@ function init() {
       },
       {
         type: "input",
-        message: "Which color would you like? green/red/pink/blue?",
+        message: "Do you prefer green/red/pink/blue?",
         name: "color"
       }
     ])
@@ -71,7 +71,6 @@ writeFileAsync("index.html", generateHTML);
  init();
 
  async function makePdf(username){
-  // console.log(username);
     try {
    
     const browser = await puppeteer.launch();
@@ -91,4 +90,4 @@ writeFileAsync("index.html", generateHTML);
   } catch (error) {
   console.log("Error generating PDF");
   }
-}
+  }
