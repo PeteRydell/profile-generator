@@ -52,7 +52,7 @@ function init() {
           repoNum: userData.data.public_repos,
           followers: userData.data.followers,
           following: userData.data.following,
-          starNum:starredRepos.data.length,
+          starNum: starredRepos.data.length,
           username: username,
           color: color
         };
