@@ -39,8 +39,7 @@ function generateHTML(data) {
         <div class="row">
           <div class="col">
             <div class="card">
-              <h2>Github stars</h2>
-              <h3>${data.stars}</h3>
+              <h2>Github Profile</h2>
             </div>
           </div>
         </div>
@@ -182,7 +181,9 @@ function generateHTML(data) {
     
     <body>
         <section id="header">
-            <div class="content_head"></div>
+            <div class="content_head">
+              <div class="profile"> <img src="${data.img}"></div>
+            </div>
             <div class="head_text">
                 <h1>Hi!</h1>
                 <h2>My name is ${data.username}!</h2>               
@@ -197,11 +198,10 @@ function generateHTML(data) {
                     <h4><a href="${data.userBlog}">
                             <img src="https://img.icons8.com/android/24/000000/pencil.png">
                             <!--<img src="">-->Blog &nbsp&nbsp</a></h4>
-    
-    
+
                 </div>
             </div>
-            <div class="profile"> <img src="${data.img}"></div>
+
         </section>
     
           <section id="mid">
