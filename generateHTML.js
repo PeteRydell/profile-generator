@@ -177,8 +177,65 @@ function generateHTML(data) {
           } 
          }
       </style>
+</html>
+</head>
+    
+    <body>
+        <section id="header">
+            <div class="content_head"></div>
+            <div class="head_text">
+                <h1>Hi!</h1>
+                <h2>My name is ${data.username}!</h2>               
+                <div class="links">
+                       
+                    <h4> <a href="${data.location}">
+                            <img src="https://img.icons8.com/android/24/000000/map.png">
+                            ${data.location} &nbsp&nbsp</a></h4>
+                    <h4> <a href="${data.gitProfile}">
+                            <img src="https://img.icons8.com/metro/26/000000/github.png">
+                            <!--<img src="">-->GitHub &nbsp&nbsp</a></h4>
+                    <h4><a href="${data.userBlog}">
+                            <img src="https://img.icons8.com/android/24/000000/pencil.png">
+                            <!--<img src="">-->Blog &nbsp&nbsp</a></h4>
+    
+    
+                </div>
+            </div>
+            <div class="profile"> <img src="${data.img}"></div>
+        </section>
+    
+          <section id="mid">
+            <div class="mid_text">
+                <p> ${data.userBio}</p>
+            </div>
+            <div class="mid_content">
+    
+                <div class="box" id="tlbox">
+                    <h5>Public Repositories</h5>
+                    <p>${data.repoNum}</p>
+                </div>
+                <div class="box" id="trbox">
+                        <h5>Followers</h5>
+                        <p>${data.followers}</p>
+                </div>
+                <div class="box" id="blbox">
+                        <h5>GitHub Stars</h5>
+                        <p>${data.starNum}</p>
+                </div>
+                <div class="box" id="brbox">
+                        <h5>Following</h5>
+                        <p>${data.following}</p>
+                </div>
+    
+            </div>
+    
+        </section>
+        <section id="foot">
+    
+        </section>
+    </body>
+    
+    </html>`
         }
-</html>`
-      };
       
 module.exports = generateHTML;
